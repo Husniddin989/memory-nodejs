@@ -1,0 +1,66 @@
+{
+  "telegram": {
+    "botToken": "7120243579:AAEoaMz5DK8pv1uvwmbD--Mmt8nqbhL_mec",
+    "chatId": "664131109"
+  },
+  "monitoring": {
+    "threshold": 80,
+    "checkInterval": 60,
+    "includeTopProcesses": true,
+    "topProcessesCount": 10,
+    "alertMessageTitle": "🖥️ SYSTEM STATUS ALERT",
+    "logFile": "logs/memory-monitor.log",
+    "logLevel": "info"
+  },
+  "cpu": { "monitor": true, "threshold": 90 },
+  "disk": { "monitor": true, "threshold": 90, "path": "/" },
+  "swap": { "monitor": true, "threshold": 80 },
+  "load": { "monitor": true, "threshold": 5 },
+  "network": { "monitor": true, "interface": "", "threshold": 90 },
+  "database": {
+    "enabled": false,
+    "type": "sqlite",
+    "sqlite": { "path": "data/metrics.db" },
+    "mysql": {
+      "host": "localhost",
+      "port": 3306,
+      "database": "system_monitor",
+      "user": "username",
+      "password": "password"
+    },
+    "postgresql": {
+      "host": "localhost",
+      "port": 5432,
+      "database": "system_monitor",
+      "user": "username",
+      "password": "password"
+    }
+  },
+  "prometheus": { "enabled": false, "port": 9090 },
+  "alertFormat": {
+    "enabled": true,
+    "topBorder": "┌────────────────────────────────────────────┐",
+    "titleBorder": "├────────────────────────────────────────────┤",
+    "sectionBorder": "├────────────────────────────────────────────┤",
+    "bottomBorder": "└────────────────────────────────────────────┘",
+    "linePrefix": "│ ",
+    "lineSuffix": " │",
+    "width": 44,
+    "titleAlign": "center",
+    "dateEmoji": "🗓️",
+    "ramEmoji": "🧠",
+    "cpuEmoji": "🔥",
+    "diskEmoji": "💾",
+    "topProcessesEmoji": "🧾",
+    "diskBreakdownEmoji": "📁",
+    "hostnameEmoji": "",
+    "ipEmoji": "",
+    "uptimeEmoji": "",
+    "osEmoji": "",
+    "kernelEmoji": "",
+    "includeSystemInfo": true,
+    "includeResources": true,
+    "includeTopProcesses": true,
+    "includeDiskBreakdown": true
+  }
+}
