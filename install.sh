@@ -20,7 +20,7 @@ fi
 # Node.js borligini tekshirish
 if ! command -v node &> /dev/null; then
     echo "Node.js topilmadi. O'rnatilmoqda..."
-    curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+    curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
     apt-get install -y nodejs
 fi
 
